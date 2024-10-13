@@ -58,17 +58,12 @@ export default function Index({ navigations }: any) {
               </Stack>
             </FormControl>
             <Box mr={2} mb={3}>
-              <Button
-                size="sm"
-                variant="link"
-                alignSelf="flex-end"
-                onPress={() => router.push("/pages/register")}
-              >
+              <Button size="sm" variant="link" alignSelf="flex-end">
                 Sign Up
               </Button>
             </Box>
             <Box mx={4}>
-              <Button onPress={() => console.log("hello world")}>Login</Button>
+              <Button onPress={() => router.push("/home")}>Login</Button>
             </Box>
           </Box>
         </Box>

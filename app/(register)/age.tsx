@@ -13,7 +13,7 @@ import {
   Progress,
 } from "native-base";
 import React from "react";
-import FormRegister from "../../../components/FormRegister";
+import FormRegister from "../../components/FormRegister";
 
 import {
   SafeAreaFrameContext,

@@ -27,28 +27,13 @@ const styles = StyleSheet.create({
     width: "100%",
   },
 });
-export default function Sleep() {
-  const [date, setDate] = useState(new Date(1598051730000));
-  const [mode, setMode]: any = useState("time");
-  const [show, setShow] = useState(true);
-
-  const onChange = (event: any, selectedDate: any) => {
-    const currentDate = selectedDate;
-    setShow(true);
-    setDate(currentDate);
-  };
-
-  const showMode = (currentMode: any) => {
-    setShow(true);
-    setMode(currentMode);
-  };
-
+export default function Wheather() {
   return (
     <Box>
       <Box mx={4} mb={3} mt={10}>
         <Center>
           <Heading textAlign={"center"}>
-            What time do you usually go to bed?
+            What's the climate/wheater like in your area?
           </Heading>
           <Text
             textAlign={"center"}
@@ -57,18 +42,29 @@ export default function Sleep() {
             color={"gray.500"}
             mt={"3"}
           >
-            Your bedtime influence your hydration pattern. Choose your typical
-            bedtime.
+            External factors like weather can influence your hydration needs.
+            Let us know the current climate in your area.
           </Text>
-          <DateTimePicker
-            testID="dateTimePicker"
-            value={date}
-            mode={mode}
-            is24Hour={true}
-            display="spinner"
-          />
-          {show && <Box mt={5}></Box>}
-          <Text mt={5}>selected: {date.toLocaleTimeString()}</Text>
+          <Box
+            borderWidth="1"
+            borderColor="coolGray.200"
+            borderRadius={"md"}
+            mt={5}
+            width="100%"
+            p={5}
+          >
+            <HStack alignItems={"center"}>
+              <Box>
+                <Image
+                  source={require("@/assets/images/sunny.png")}
+                  size={"50px"}
+                ></Image>
+              </Box>
+              <Box ml={5} pr={5}>
+                <Text>Hot</Text>
+              </Box>
+            </HStack>
+          </Box>
         </Center>
       </Box>
     </Box>
